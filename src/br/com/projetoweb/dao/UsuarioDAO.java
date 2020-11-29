@@ -14,7 +14,7 @@ public class UsuarioDAO {
 
 	public static ArrayList<Usuario> listaUsuarios() {
 		Connection cnn = ConnectionFactory.getConnection();
-		String query = "SELECT * FROM usuario";
+		String query = "SELECT * FROM usuarios";
 		ArrayList<Usuario> arUsuarios = new ArrayList<Usuario>();
 
 		try {
@@ -22,8 +22,8 @@ public class UsuarioDAO {
 			ResultSet rsUsuarios = pStm.executeQuery();
 
 			while (rsUsuarios.next()) {
-				Usuario user = new Usuario(rsUsuarios.getInt("id"), rsUsuarios.getString("login"),
-						rsUsuarios.getString("senha"), rsUsuarios.getString("status"), rsUsuarios.getInt("pessoa_ID"));
+				Usuario user = new Usuario(rsUsuarios.getInt("id"), rsUsuarios.getString("nome"), rsUsuarios.getString("login"),
+						rsUsuarios.getString("senha"));
 				arUsuarios.add(user);
 			}
 			cnn.close();

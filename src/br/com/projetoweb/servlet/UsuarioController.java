@@ -15,36 +15,40 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/usuario")
 public class UsuarioController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+		rd.forward(request, response);
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		doGet(request, response);
 	}
-	
-	protected void listUsuarios(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	protected void listUsuarios(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// Buscar dados do banco
-		
+
 		RequestDispatcher rd = request.getRequestDispatcher("listaUsuariosAction.jsp");
-        rd.forward(request, response);
+		rd.forward(request, response);
 	}
-	
-	protected void cadUsuario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	protected void cadUsuario(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// Buscar dados do banco
-		
+
 		RequestDispatcher rd = request.getRequestDispatcher("cadUsuarioAction.jsp");
-        rd.forward(request, response);
+		rd.forward(request, response);
 	}
 
 }

@@ -65,22 +65,23 @@ img {
 }
 
 .play_button {
-    background-color: #ff3d49;
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    right: 5px;
-    bottom: 111px;
-    font-size: 27px;
-    padding-left: 21px;
-    padding-top: 16px;
-    color: #FFFFFF;
-    cursor: pointer;
-    top: 256px;
+	background-color: #ff3d49;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	right: 5px;
+	bottom: 111px;
+	font-size: 27px;
+	padding-left: 21px;
+	padding-top: 16px;
+	color: #FFFFFF;
+	cursor: pointer;
+	top: 256px;
 }
+
 span.movie_info {
-    font-size: 12px;
+	font-size: 12px;
 }
 </style>
 </head>
@@ -113,6 +114,14 @@ span.movie_info {
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="series?action=listSeries">Listar</a>
 						<a class="dropdown-item" href="series?action=cadSerie">Cadastrar</a>
+					</div></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> Diário </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="diario?action=listNotas">Listar</a>
+						<a class="dropdown-item" href="diario?action=cadNota">Cadastrar</a>
 					</div></li>
 			</ul>
 		</div>
